@@ -561,3 +561,5 @@ function zmtp_proto.dissector(tvb, pinfo, tree)
         return
 end
 
+-- add zmtp dissector
+DissectorTable.get("tcp.port"):add(1234, zmtp_proto)
